@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "@/context/CartContext";
 import CartList from "./components/CartList";
 import EmptyCart from "./components/EmptyCart";
+import { CartSummary } from "./components/CartSummary";
 
 export default function Cart() {
   const { cart } = useContext(CartContext);
@@ -28,8 +29,15 @@ export default function Cart() {
       <h1 className="text-3xl text-white text-center mb-8">
         MY CART ({cart.length})
       </h1>
-      <CartList products={cart} />
-      <CartSummary products={cart} />
+
+      <div className="max-w-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <CartList products={cart} />
+        </div>
+        <div>
+          <CartSummary products={cart} />
+        </div>
+      </div>
     </main>
   );
 }

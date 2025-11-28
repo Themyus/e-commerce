@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { useContext } from "react";
+import { CartContext } from "@/context/CartContext";
 
-export default function Header() {
+export default function Header({}) {
+  const { cart } = useContext(CartContext);
+
   return (
     <header className="flex px-2 pt-4 pb-4 bg-zinc-950 text-white border-b">
       <div className="flex items-center justify-between w-full mx-auto max-w-7xl px-10">
@@ -16,9 +21,7 @@ export default function Header() {
               className="object-contain"
               alt="E-commerce logo"
             />
-            <h3 className="text-xl relative top-px text-amber-300">
-              E-COMMERCE
-            </h3>
+            <h3 className="text-xl relative top-px">E-COMMERCE</h3>
           </div>
 
           {/* Menu de Navegação */}
@@ -28,7 +31,9 @@ export default function Header() {
                 <Link href="/">STORE</Link>
               </li>
               <li className="hover:underline">
-                <Link href="/cart">CART</Link>
+                <Link href="/cart">
+                  CART {cart.length > 0 && `(${cart.length})`}
+                </Link>
               </li>
               <li className="hover:underline">
                 <Link href="/about">ABOUT</Link>

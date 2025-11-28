@@ -9,14 +9,14 @@ export default function CartItem({ product }) {
     useContext(CartContext);
 
   return (
-    <div className="flex flex-col justify-between bg-zinc-900 border-2 border-zinc-800 shadow rounded-lg w-[700px] min-h-40 px-4">
-      <div className="flex justify-center items-center h-48 mt-6 overflow-hidden">
+    <div className="flex flex-col justify-between bg-zinc-900 shadow rounded-lg w-[600px] min-h-20 px-4">
+      <div className="flex justify-center items-center h-20 mt-6 overflow-hidden">
         <Image
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           src={product.image}
           alt={product.title}
-          className="w-40 max-h-32 object-contain"
+          className="w-20 h-20 max-h-32 object-contain"
         />
       </div>
       <h3 className="text-white text-md line-clamp-2 mt-10 mb-6">
@@ -29,9 +29,9 @@ export default function CartItem({ product }) {
         <div className="flex gap-4 text-white">
           <button
             onClick={() => removeFromCart(product.id)}
-            className="px-16 py-2 bg-red-800 rounded hover:brightness-95 hover:cursor-pointer active:brightness-90"
+            className="px-16 py-2 text-red-600 bg-zinc-900 border border-red-600 rounded-3xl hover:brightness-95 hover:cursor-pointer active:brightness-90"
           >
-            Remove
+            Exclude
           </button>
           <button
             onClick={() => decreaseQuantity(product.id)}
