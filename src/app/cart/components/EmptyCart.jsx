@@ -11,7 +11,7 @@ export default function EmptyCart() {
         <div>
           <Link
             href="/"
-            className="hover:brightness-95 active:brightness-90 bg-orange-500 text-white px-3 py-2 shadow rounded"
+            className="hover:brightness-95 active:brightness-90 bg-orange-600 text-white px-3 py-2 shadow rounded"
           >
             Go to store
           </Link>
