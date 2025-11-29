@@ -19,7 +19,7 @@ export default async function Home() {
 
   // Busca os produtos na API (servidor)
   try {
-    const response = await fetch("https://fakestoreapi.com/products", {
+    const response = await fetch("/api/products", {
       headers: {
         "User-Agent": "Mozilla/5.0",
       },
