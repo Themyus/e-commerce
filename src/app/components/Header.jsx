@@ -61,7 +61,7 @@ export default function Header() {
             <Linkedin className="hover:text-blue-700 transition-colors" />
           </Link>
           <Link
-            href="https://github.com/Themyus"
+            href="https://github.com/GustavoThemyus"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit my GitHub"
