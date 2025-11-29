@@ -49,7 +49,7 @@ export default function ProductCard({ product, addToCart }) {
 
               setTimeout(() => setAdded(false), 2000);
             }}
-            className="flex text-white bg-orange-700 border border-amber-700 rounded-3xl shadow px-14 py-2 cursor-pointer hover:brightness-95 transition-colors active:brightness-90"
+            className="flex text-white bg-orange-600 border border-amber-600 rounded-3xl shadow px-14 py-2 cursor-pointer hover:brightness-95 transition-colors active:brightness-90"
           >
             Add to cart
           </button>
