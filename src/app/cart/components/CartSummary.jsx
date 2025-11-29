@@ -59,26 +59,26 @@ export function CartSummary({ products }) {
   }
 
   return (
-    <div className="bg-zinc-950 border-2 border-zinc-800 w-[700px] rounded-lg p-6 sticky top-8">
-      <h2 className="text-white text-xl mb-6">Order resume</h2>
+    <div className="bg-gray-200 shadow w-[700px] rounded-lg p-6 sticky top-8">
+      <h2 className="text-black text-xl mb-6">Order resume</h2>
 
       <div className="space-y-3 mb-6 flex flex-col">
         {/* subtotal */}
-        <div className="text-white flex flex-col">
+        <div className="text-black flex flex-col">
           <span>Subtotal: {totalItems} item(s)</span>
           <span>Total: ${total.toFixed(2)}</span>
         </div>
 
         <div className="flex gap-1">
-          <span className="text-white">Fees:</span>
-          <span className="text-emerald-400">Free</span>
+          <span className="text-black">Fees:</span>
+          <span className="text-emerald-600">Free</span>
         </div>
 
         {/* Total */}
-        <div className="border-t border-zinc-700 pt-3 mt-3">
-          <div className="flex justify-between text-white text-xl">
+        <div className="border-t border-black pt-3 mt-3">
+          <div className="flex justify-between text-black text-xl">
             <span>Total:</span>
-            <span className="text-amber-200">${total.toFixed(2)}</span>
+            <span className="text-orange-600">${total.toFixed(2)}</span>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@ export function CartSummary({ products }) {
         <button
           onClick={handleCheckout}
           disabled={isProcessing}
-          className={`w-full bg-emerald-500 border border-emerald-600 text-black py-3 px-2 rounded-3xl transition ${
+          className={`w-full bg-emerald-500 border border-emerald-500 text-black py-3 px-2 rounded-3xl transition ${
             isProcessing
               ? "opacity-50 cursor-not-allowed"
               : "hover:brightness-95 hover:cursor-pointer active:brightness-90"
@@ -99,13 +99,13 @@ export function CartSummary({ products }) {
 
         <Link
           href="/"
-          className="text-white pt-5 hover:underline block w-fit mx-auto"
+          className="text-black pt-5 hover:underline block w-fit mx-auto"
         >
           Continue shopping
         </Link>
 
         <div
-          className={`flex items-center justify-center gap-2 text-emerald-400 text-sm transition-all duration-300 transform ${
+          className={`flex items-center justify-center gap-2 text-emerald-500 text-sm transition-all duration-300 transform ${
             showSuccess
               ? "opacity-100 translate-y-0 h-auto mt-6"
               : "opacity-0 -translate-y-2 h-0 overflow-hidden"

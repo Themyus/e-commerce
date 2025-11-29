@@ -13,7 +13,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex px-2 pt-4 pb-4 bg-zinc-950 text-white border-b">
+    <header className="flex px-2 pt-4 pb-4 bg-gray-50 text-black border-b">
       <div className="flex items-center justify-between w-full mx-auto max-w-7xl px-10">
         {/* LADO ESQUERDO: Logo + Menu */}
         <div className="flex items-center gap-8">
@@ -57,7 +57,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="Visite meu LinkedIn"
           >
-            <Linkedin className="hover:text-amber-300 transition-colors" />
+            <Linkedin className="hover:text-orange-700 transition-colors" />
           </Link>
           <Link
             href="https://github.com/Themyus"
@@ -65,7 +65,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="Visite meu GitHub"
           >
-            <Github className="hover:text-amber-300 transition-colors" />
+            <Github className="hover:text-orange-700 transition-colors" />
           </Link>
           <Link
             href="https://www.instagram.com/gustavothemyus/"
@@ -73,7 +73,7 @@ export default function Header() {
             rel="noopener noreferrer"
             aria-label="Visite meu Instagram"
           >
-            <Instagram className="hover:text-amber-300 transition-colors" />
+            <Instagram className="hover:text-orange-700 transition-colors" />
           </Link>
         </div>
       </div>

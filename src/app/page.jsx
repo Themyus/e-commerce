@@ -39,13 +39,9 @@ export default async function Home() {
   }
 
   return (
-    <main className="p-8 bg-zinc-950">
+    <main className="p-8 bg-gray-50">
       <div className="mt-8 mb-10">
-        <button className="text-white absolute left-22 flex gap-1 cursor-pointer">
-          <ChevronLeft />
-          Previous
-        </button>
-        <h1 className="text-3xl text-white text-center">STORE</h1>
+        <h1 className="text-3xl text-black text-center">STORE</h1>
       </div>
 
       {/* Se houver erro, mostra mensagem */}

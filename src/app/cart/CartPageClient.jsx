@@ -16,7 +16,7 @@ export default function Cart() {
 
   if (!isClient) {
     return (
-      <main className="bg-zinc-950 text-white text-center mt-20">
+      <main className="bg-gray-50 text-black text-center mt-20">
         Loading...
       </main>
     );
@@ -27,8 +27,8 @@ export default function Cart() {
   }
 
   return (
-    <main className="p-8 bg-zinc-950 min-h-screen">
-      <h1 className="text-3xl text-white text-center mb-8">
+    <main className="p-8 bg-gray-50 min-h-screen">
+      <h1 className="text-3xl text-black text-center mb-8">
         MY CART ({cart.length})
       </h1>
 
