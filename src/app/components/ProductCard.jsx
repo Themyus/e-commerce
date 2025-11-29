@@ -6,7 +6,7 @@ import { CircleCheck, Star } from "lucide-react";
 export default function ProductCard({ product, addToCart }) {
   const [added, setAdded] = useState(false);
   return (
-    <div className="bg-gray-300 rounded-xl flex flex-col justify-between h-92 p-4">
+    <div className="bg-gray-300 rounded-xl flex flex-col justify-between h-92 p-6">
       <div className="flex justify-center items-center h-40 overflow-hidden">
         <Image
           width={400}
