@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "@/context/CartContext";
 
@@ -55,25 +56,28 @@ export default function Header() {
             href="https://www.linkedin.com/in/gustavothemyus/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visite meu LinkedIn"
+            aria-label="Visit my LinkedIn"
           >
-            <Linkedin className="hover:text-orange-700 transition-colors" />
+            <Linkedin className="hover:text-blue-700 transition-colors" />
           </Link>
           <Link
             href="https://github.com/Themyus"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visite meu GitHub"
+            aria-label="Visit my GitHub"
           >
-            <Github className="hover:text-orange-700 transition-colors" />
+            <Github className="hover:text-purple-700 transition-colors" />
           </Link>
           <Link
-            href="https://www.instagram.com/gustavothemyus/"
+            href="https://wa.me/5583998069429"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visite meu Instagram"
+            aria-label="Visit my WhatsApp"
           >
-            <Instagram className="hover:text-orange-700 transition-colors" />
+            <SiWhatsapp
+              size={22}
+              className="hover:text-green-500 transition-colors"
+            />
           </Link>
         </div>
       </div>
