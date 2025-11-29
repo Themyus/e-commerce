@@ -19,7 +19,11 @@ export default async function Home() {
 
   // Busca os produtos na API (servidor)
   try {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const response = await fetch("https://fakestoreapi.com/products", {
+      headers: {
+        "User-Agent": "Mozilla/5.0",
+      },
+    });
     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
     products = await response.json();
   } catch (err) {
@@ -49,12 +53,6 @@ export default async function Home() {
             </h2>
             <p className="mb-4">Couldn't load products..</p>
             <p className="text-sm text-gray-400 mb-6">Erro: {error}</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-amber-300 text-black px-6 py-2 rounded hover:brightness-90"
-            >
-              Try again
-            </button>
           </div>
         </div>
       ) : products.length === 0 ? (
