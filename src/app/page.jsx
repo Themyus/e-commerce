@@ -19,11 +19,14 @@ export default async function Home() {
 
   // Busca os produtos na API (servidor)
   try {
-    const response = await fetch("/api/products", {
-      headers: {
-        "User-Agent": "Mozilla/5.0",
-      },
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,
+      {
+        headers: {
+          "User-Agent": "Mozilla/5.0",
+        },
+      }
+    );
     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
     products = await response.json();
   } catch (err) {
