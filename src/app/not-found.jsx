@@ -13,14 +13,14 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="bg-gray-50 flex flex-col items-center justify-center">
       <h1 className="text-center font-bold mt-9 text-3xl">
         404 page not found
       </h1>
       <p className="text-xl">
         This page that the user tried to access doesn't exist
       </p>
-      <Link href="/" className="mt-4 font-bold text-white bg-zinc-900 p-2">
+      <Link href="/" className="mt-4 font-bold text-white bg-zinc-950 p-2">
         Back to Home
       </Link>
     </div>
